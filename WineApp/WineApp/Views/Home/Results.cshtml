@@ -1,0 +1,56 @@
+﻿@model List<WineApp.Models.Wine>
+@{
+    ViewData["Title"] = "Results";
+}
+
+@if (Model.Count > 0)
+{
+    <header>
+        <h1 class="title">Results</h1>
+        <a href="..">Go Back</a>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Description</th>
+                <th>Designation</th>
+                <th>Points</th>
+                <th>Price</th>
+                <th>Province</th>
+                <th>Region 1</th>
+                <th>Region 2</th>
+                <th>Variety</th>
+                <th>Winery</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Country</td>
+                        <td>@item.Description</td>
+                        <td>@item.Designation</td>
+                        <td>@item.Points / 100</td>
+                        <td>$@item.Price</td>
+                        <td>@item.Province</td>
+                        <td>@item.Region_1</td>
+                        <td>@item.Region_2</td>
+                        <td>@item.Variety</td>
+                        <td>@item.Winery</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <header>
+        <h1 class="title">No Wines Found!</h1>
+        <a href="..">Go Back</a>
+    </header>
+}
+
