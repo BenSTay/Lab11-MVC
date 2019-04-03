@@ -3,6 +3,7 @@
 **Version**: 1.0.0
 
 ## Overview
+A ASP.NET MVC application that queries a .csv file for wine information using filters provided the user.
 
 ## Getting Started
 1. Create a fork of this repository, and clone your fork to your device.
