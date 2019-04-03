@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<header>
+    <h1 class="title">Home</h1>
+</header>
+
+
+<form method="get" action="Home/Results">
+    <label for="minPrice">Minimum Price</label>
+    <input type="number" min="0" placeholder="0" name="minPrice" />
+
+    <label for="maxPrice">Maximum Price</label>
+    <input type="number" min="0" placeholder="2400" name="maxPrice" />
+
+    <label for="minPoints">Minimum Points</label>
+    <input type="number" min="0" max="100" placeholder="0" name="minPoints" />
+
+    <label for="maxPoints">Maximum Points</label>
+    <input type="number" min="0" max="100" placeholder="100" name="maxPoints" />
+
+    <button type="submit">Submit</button>
+</form>
+
